@@ -1,0 +1,12 @@
+<Page x:Class="IpsAusentismos.Views.Pages.DashboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Grid Margin="20">
+    <UniformGrid Columns="3" Rows="1" Margin="0,0,0,20">
+      <Border Padding="20" Background="#E5E7EB" Margin="10"><StackPanel><TextBlock Text="Empleados"/><TextBlock FontSize="24" Text="0"/></StackPanel></Border>
+      <Border Padding="20" Background="#E5E7EB" Margin="10"><StackPanel><TextBlock Text="Eventos (mes)"/><TextBlock FontSize="24" Text="0"/></StackPanel></Border>
+      <Border Padding="20" Background="#E5E7EB" Margin="10"><StackPanel><TextBlock Text="Ausencias hoy"/><TextBlock FontSize="24" Text="0"/></StackPanel></Border>
+    </UniformGrid>
+    <TextBlock Text="Bienvenido"/>
+  </Grid>
+</Page>

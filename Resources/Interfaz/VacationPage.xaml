@@ -1,0 +1,19 @@
+<Page x:Class="IpsAusentismos.Views.Pages.VacationsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Grid Margin="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+      <TextBox x:Name="EmpId" Width="80"/>
+      <DatePicker x:Name="Start" Margin="10,0"/>
+      <DatePicker x:Name="End" Margin="10,0"/>
+      <Button Content="Solicitar" Margin="10,0" Click="Create_Click"/>
+    </StackPanel>
+
+    <DataGrid x:Name="Grid" Grid.Row="1" AutoGenerateColumns="True"/>
+  </Grid>
+</Page>

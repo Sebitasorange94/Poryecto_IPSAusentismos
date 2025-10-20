@@ -1,0 +1,29 @@
+<Page x:Class="IpsAusentismos.Views.Pages.EventsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Grid Margin="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+      <TextBlock Text="Empleado:" VerticalAlignment="Center"/>
+      <TextBox x:Name="EmpId" Width="80" Margin="5,0"/>
+      <TextBlock Text="Fecha:" VerticalAlignment="Center"/>
+      <DatePicker x:Name="EvtDate" Margin="5,0"/>
+      <TextBlock Text="Tipo:" VerticalAlignment="Center"/>
+      <ComboBox x:Name="EvtType" Width="140" Margin="5,0">
+        <ComboBoxItem Content="Ausentismo"/>
+        <ComboBoxItem Content="Incapacidad"/>
+        <ComboBoxItem Content="Permiso"/>
+        <ComboBoxItem Content="Tarde"/>
+      </ComboBox>
+      <Button Content="Guardar" Margin="10,0" Click="Save_Click"/>
+    </StackPanel>
+
+    <TextBox x:Name="Desc" Grid.Row="1" Height="70" TextWrapping="Wrap"/>
+    <DataGrid x:Name="Grid" Grid.Row="2" AutoGenerateColumns="True"/>
+  </Grid>
+</Page>

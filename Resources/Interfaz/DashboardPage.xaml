@@ -1,0 +1,65 @@
+
+<Page x:Class="EV03.Wpf.Views.DashboardPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Dashboard">
+  <ScrollViewer>
+    <StackPanel Margin="24,16,24,16">
+      <TextBlock Text="Bienvenido" FontSize="24" FontWeight="Bold" Margin="0,0,0,12"/>
+      <StackPanel Orientation="Horizontal">
+        <Border Style="{StaticResource StatChip}"><StackPanel><TextBlock Text="Empleados"/><TextBlock Text="200" FontWeight="Bold"/></StackPanel></Border>
+        <Border Style="{StaticResource StatChip}" Background="#2F7F6E"><StackPanel><TextBlock Text="Eventos"/><TextBlock Text="25" FontWeight="Bold"/></StackPanel></Border>
+        <Border Style="{StaticResource StatChip}" Background="#3B90A0"><StackPanel><TextBlock Text="Ausencias"/><TextBlock Text="5" FontWeight="Bold"/></StackPanel></Border>
+      </StackPanel>
+
+      <Grid Margin="0,12,0,0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Style="{StaticResource Card}">
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Canvas Grid.Column="0" Height="140">
+              <Ellipse Width="120" Height="120" Fill="#E5E7EB" Canvas.Left="10" Canvas.Top="10"/>
+              <Path Data="M 0 0 L 50 0 A 50 50 0 1 1 -35.35 35.35 Z" Fill="#93C5FD" Stretch="Fill" Width="120" Height="120" RenderTransformOrigin="0.5,0.5" Canvas.Left="10" Canvas.Top="10"/>
+            </Canvas>
+            <Canvas Grid.Column="1" Height="140">
+              <Rectangle Width="20" Height="50" Fill="#C7D2FE" Canvas.Left="10" Canvas.Top="70"/>
+              <Rectangle Width="20" Height="90" Fill="#93C5FD" Canvas.Left="40" Canvas.Top="30"/>
+              <Rectangle Width="20" Height="120" Fill="#60A5FA" Canvas.Left="70" Canvas.Top="0"/>
+              <Rectangle Width="20" Height="80" Fill="#3B82F6" Canvas.Left="100" Canvas.Top="40"/>
+            </Canvas>
+          </Grid>
+        </Border>
+
+        <Border Grid.Column="1" Style="{StaticResource Card}">
+          <StackPanel>
+            <TextBlock Text="Registrar Nuevo Evento" FontWeight="SemiBold"/>
+            <Grid Margin="0,8,0,0">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+              </Grid.ColumnDefinitions>
+              <StackPanel Margin="0,0,12,0">
+                <TextBlock Text="Nombre del empleado"/>
+                <ComboBox><ComboBoxItem Content="Raul Marchan"/></ComboBox>
+              </StackPanel>
+              <StackPanel Grid.Column="1">
+                <TextBlock Text="Tipo de evento"/>
+                <ComboBox><ComboBoxItem Content="Vacaciones"/></ComboBox>
+              </StackPanel>
+              <StackPanel Grid.ColumnSpan="2" Margin="0,8,0,0">
+                <TextBlock Text="Descripción"/>
+                <TextBox Text="Vacaciones"/>
+              </StackPanel>
+            </Grid>
+          </StackPanel>
+        </Border>
+      </Grid>
+    </StackPanel>
+  </ScrollViewer>
+</Page>

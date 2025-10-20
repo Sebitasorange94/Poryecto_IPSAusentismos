@@ -1,0 +1,63 @@
+############################
+# .NET / C#
+############################
+# Salidas de compilación
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]ogs/
+TestResults/
+*.log
+*.cache
+*.pdb
+
+# Paquetes locales (si existiera la carpeta; hoy NuGet usa cache global)
+packages/
+
+############################
+# IDEs y herramientas
+############################
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# JetBrains Rider / ReSharper (opcionales)
+.idea/
+*.sln.iml
+_ReSharper.Caches/
+
+# VS Code: ignora todo menos configuraciones útiles
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+############################
+# SO / archivos temporales
+############################
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+############################
+# Secretos y configuraciones sensibles
+############################
+# (No subas secretos en appsettings.*.json de producción)
+appsettings.*.local.json
+*.secret.json
+*.secrets.json
+*.key
+*.pem
+*.pfx
+.env
+.env.*

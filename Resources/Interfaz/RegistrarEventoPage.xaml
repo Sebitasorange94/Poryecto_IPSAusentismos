@@ -1,0 +1,38 @@
+
+<Page x:Class="EV03.Wpf.Views.RegistrarEventoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Registrar Evento">
+  <ScrollViewer>
+    <StackPanel Margin="24,16,24,16">
+      <Border Style="{StaticResource Card}">
+        <StackPanel>
+          <TextBlock Text="Registrar Nuevo Evento" FontSize="20" FontWeight="Bold"/>
+          <Grid Margin="0,12,0,0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*"/>
+              <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Margin="0,0,12,8">
+              <TextBlock Text="Nombre del empleado"/>
+              <ComboBox><ComboBoxItem Content="Raul Marchan"/></ComboBox>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Margin="0,0,0,8">
+              <TextBlock Text="Fecha"/>
+              <DatePicker/>
+            </StackPanel>
+            <StackPanel Grid.ColumnSpan="2" Margin="0,0,0,8">
+              <TextBlock Text="Tipo de evento"/>
+              <ComboBox><ComboBoxItem Content="Vacaciones"/></ComboBox>
+            </StackPanel>
+            <StackPanel Grid.ColumnSpan="2">
+              <TextBlock Text="Descripción"/>
+              <TextBox Height="70" TextWrapping="Wrap" AcceptsReturn="True"/>
+            </StackPanel>
+          </Grid>
+          <Button Content="Añadir" Margin="0,16,0,0" HorizontalAlignment="Left"/>
+        </StackPanel>
+      </Border>
+    </StackPanel>
+  </ScrollViewer>
+</Page>
